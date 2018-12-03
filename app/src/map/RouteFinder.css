@@ -1,0 +1,7 @@
+.routefinder-container {
+    display: block;
+    width: 100%;
+}
+.routefinder-form-container {
+    flex: 0 0 50%;
+}

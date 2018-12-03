@@ -1,0 +1,17 @@
+{
+    "name": "driving-route",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "concurrently": "^3.6.0",
+        "node-sass": "^4.10.0"
+    },
+    "scripts": {
+        "install-client": "cd app && npm install",
+        "install-server": "cd server && npm install",
+        "client": "cd app && npm run start",
+        "server": "cd server && node index.js",
+        "install": "concurrently  \"npm run install-server\" \"npm run install-client\"",
+        "start": "concurrently  \"npm run server\" \"npm run client\""
+    }
+}

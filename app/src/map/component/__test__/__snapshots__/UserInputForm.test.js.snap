@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Userinput Form Test render correctly 1`] = `
+<div
+  className="userinput-form"
+>
+  <div
+    className="form-input"
+  >
+    <label>
+      Starting Location
+    </label>
+    <input
+      type="text"
+    />
+  </div>
+  <div
+    className="form-input"
+  >
+    <label>
+      Drop-off point
+    </label>
+    <input
+      type="text"
+    />
+  </div>
+  <div
+    className="go-btn"
+  >
+    <button
+      onClick={[Function]}
+    >
+      G0
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Userinput Form Test render correctly 1`] = `
+<div
+  className="userinput-form"
+>
+  <div
+    className="form-input"
+  >
+    <label>
+      Starting Location
+    </label>
+    <input
+      type="text"
+    />
+  </div>
+  <div
+    className="form-input"
+  >
+    <label>
+      Drop-off point
+    </label>
+    <input
+      type="text"
+    />
+  </div>
+  <div
+    className="go-btn"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Go
+    </button>
+  </div>
+</div>
+`;
