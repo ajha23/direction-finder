@@ -18,6 +18,12 @@ class UserInputForm extends Component {
         this.props.getDirections(origin, dest);
     };
 
+    resetForm = () => {
+      this.props.resetForm();
+      document.getElementById('ContactForm').reset();
+
+    }
+
 
     renderAutoComplete = async () => {
         const maps = await this.props.maps();
@@ -34,17 +40,21 @@ class UserInputForm extends Component {
 
     render() {
         return (
-            <div >
-                <input id="origin-input" class="controls" type="text"
+            <form id='ContactForm' ref={this.formReset} onSubmit={this.handleSubmit}>
+                <input id="origin-input" className="controls" type="text"
                     placeholder="Enter an origin location" ref={el => (this.originInput = el)} />
 
-                <input id="destination-input" class="controls" type="text"
+                <input id="destination-input" className="controls" type="text"
                     placeholder="Enter a destination location" ref={el => (this.destInput = el)} />
 
-                <button type="button" class="controls" onClick={this.getRoute}>
+                <button type="button" className="controls" onClick={this.getRoute}>
                     Go
                </button>
-            </div>
+               
+                <button type="button" className="controls" onClick={this.resetForm}>
+                    Reset
+                </button>
+            </form>
         );
     }
 }

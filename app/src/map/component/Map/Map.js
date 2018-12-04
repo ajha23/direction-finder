@@ -69,6 +69,12 @@ class Map extends Component {
         return null;
     }
 
+    componentDidUpdate(){
+        if(this.props.directions == null){
+            this.initMap();
+        }
+    }
+
 
     render() {
         return (
@@ -86,13 +92,3 @@ Map.defaultProps = {
 };
 
 export default Map;
-
-
-
-
-
-
-
-
-
-

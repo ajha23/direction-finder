@@ -43,13 +43,21 @@ class RouteFinder extends Component {
         alert(message);
     };
 
+    resetForm=()=>{
+        this.setState(() => ({
+            RouteFinderResponse: null
+        }));
+
+        this.forceUpdate();
+    }
+
     render() {
-        const { RouteFinderResponse} = this.state;
+        const { RouteFinderResponse } = this.state;
         return (
             <div className="routefinder-container">
 
                 <div className="routefinder-form-container">
-                    <UserInputForm getDirections={this.getDirections} />
+                    <UserInputForm getDirections={this.getDirections} resetForm={this.resetForm} />
                     <div className="routefinder-route-info">
                         {RouteFinderResponse && (
                             <RouteInfo {...RouteFinderResponse} />
