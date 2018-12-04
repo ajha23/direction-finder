@@ -19,8 +19,8 @@ class UserInputForm extends Component {
     };
 
     resetForm = () => {
-      this.props.resetForm();
-      document.getElementById('ContactForm').reset();
+        this.props.resetForm();
+        document.getElementById('ContactForm').reset();
 
     }
 
@@ -40,7 +40,7 @@ class UserInputForm extends Component {
 
     render() {
         return (
-            <form id='ContactForm' ref={this.formReset} onSubmit={this.handleSubmit}>
+            <form id='ContactForm' ref={this.formReset}>
                 <input id="origin-input" className="controls" type="text"
                     placeholder="Enter an origin location" ref={el => (this.originInput = el)} />
 
@@ -50,7 +50,7 @@ class UserInputForm extends Component {
                 <button type="button" className="controls" onClick={this.getRoute}>
                     Go
                </button>
-               
+
                 <button type="button" className="controls" onClick={this.resetForm}>
                     Reset
                 </button>
