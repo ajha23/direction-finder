@@ -47,8 +47,6 @@ class RouteFinder extends Component {
         this.setState(() => ({
             RouteFinderResponse: null
         }));
-
-        this.forceUpdate();
     }
 
     render() {
